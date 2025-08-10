@@ -1,0 +1,60 @@
+Section,Field,Value
+BioData,Branch,CSE
+BioData,Semester,II/IV B.Tech I Semester
+BioData,Gender,Male
+BioData,DOB,03/11/2006
+BioData,Nationality,Indian
+BioData,Religion,Hindu
+BioData,Entrance Type,ECET
+BioData,EAMCET/ECET Rank,248
+BioData,Seat Type,Convener-Self
+BioData,Category & Caste,"BC-B, BC-B"
+BioData,Last Studied,Govt Polytechnic Nalgonda
+BioData,Joining Date,19/07/2025
+BioData,Mobile.No,7013123744
+BioData,Aadhar.No,232610997809
+BioData,Scholarship,No
+BioData,"Qualification	Board	H.T.No	Year
+Of
+Pass	Institute	Max.Marks	Obtained
+Marks	Grade
+Letter	Grade
+Points
+S.S.C	ssc	2231114411	2022	ST.Theresa high school		10		10.00
+Inter								
+Diploma	SBTET	22027-CS-037	2025	Govt Polytechnic Nalgonda	0	9.48",Board
+BioData,H.T.No,Institute
+BioData,Qualification,H.T.No
+BioData,"Year
+Of
+Pass",Max.Marks
+BioData,S.S.C,2231114411
+BioData,Diploma,22027-CS-037
+BioData,2025,0
+BioData,Father Name,Bathula Vijay
+BioData,Mother Name,Bathula Sridevi
+BioData,Occupation,Teacher
+BioData,Mother Mobile.No,9652211286
+BioData,Annual Income,0
+BioData,Father mailid,bathulasalomi@gmail.com
+BioData,Correspondence Address,20-11-DH0007 road no-18 KHAMAM KHAMAM KHAMAM TELANGANA 507003
+BioData,Permanent Address,20-11-DH0007 road no-18 KHAMAM KHAMAM KHAMAM TELANGANA 507003
+BioData,Place of birth,Khammam
+BioData,Type of place,Urban
+BioData,Staying at,Outside
+S.S.C,Board,ssc
+S.S.C,HallTicketNo,2231114411
+S.S.C,YearOfPass,2022
+S.S.C,Institute,ST.Theresa high school
+S.S.C,MaxMarks,
+S.S.C,Obtained,10
+S.S.C,GradeLetter,
+S.S.C,GradePoints,10.00
+Diploma,Board,SBTET
+Diploma,HallTicketNo,22027-CS-037
+Diploma,YearOfPass,2025
+Diploma,Institute,Govt Polytechnic Nalgonda
+Diploma,MaxMarks,0
+Diploma,Obtained,9.48
+Diploma,GradeLetter,
+Diploma,GradePoints,

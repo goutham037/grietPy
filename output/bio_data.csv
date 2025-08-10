@@ -1,0 +1,66 @@
+Section,Subsection,Field,Value
+BioData,,Branch,CSE
+BioData,,Semester,II/IV B.Tech I Semester
+BioData,,Gender,Female
+BioData,,DOB,16/10/2006
+BioData,,Nationality,Indian
+BioData,,Religion,Hindu
+BioData,,Entrance Type,ECET
+BioData,,EAMCET/ECET Rank,292
+BioData,,Seat Type,Convener-Self
+BioData,,Category & Caste,"BC-D, BC-D"
+BioData,,Last Studied,Govt Polytecnic Hyderabad
+BioData,,Joining Date,19/07/2025
+BioData,,Mobile.No,9182863648
+BioData,,Aadhar.No,856840733029
+BioData,,Scholarship,No
+BioData,,"Qualification	Board	H.T.No	Year
+Of
+Pass	Institute	Max.Marks	Obtained
+Marks	Grade
+Letter	Grade
+Points
+S.S.C	ssc	2205109675	2022	Z P Girls High School		8.8		8.80
+Inter								
+Diploma	SBTET	22001-CS-004	2025	Govt Polytechnic ,Hyderabad	0	9.4",Board
+BioData,,H.T.No,Institute
+BioData,,Qualification,H.T.No
+BioData,,"Year
+Of
+Pass",Max.Marks
+BioData,,S.S.C,2205109675
+BioData,,Diploma,22001-CS-004
+BioData,,2025,0
+BioData,,Father Name,Penta Chandramouli
+BioData,,Occupation,Beedi Worker
+BioData,,Mother Name,Penta Sunitha
+BioData,,Father Mobile.No,9848632297
+BioData,,Mother Mobile.No,9848631400
+BioData,,Annual Income,0
+BioData,,Correspondence Address,1-125/3/11 Armoor Railway station ARMOOR ARMOOR NIzamabad TELANGANA 503224
+BioData,,Permanent Address,1-125/3/11 Armoor Railway station ARMOOR ARMOOR NIzamabad TELANGANA 503224
+BioData,,Type of place,Rural
+Education,School (SSC),Board,
+Education,School (SSC),HallTicketNo,
+Education,School (SSC),YearOfPass,
+Education,School (SSC),Institute,
+Education,School (SSC),MaxMarks,
+Education,School (SSC),Obtained,
+Education,School (SSC),GradeLetter,
+Education,School (SSC),GradePoints,
+Education,Intermediate,Board,
+Education,Intermediate,HallTicketNo,
+Education,Intermediate,YearOfPass,
+Education,Intermediate,Institute,
+Education,Intermediate,MaxMarks,
+Education,Intermediate,Obtained,
+Education,Intermediate,GradeLetter,
+Education,Intermediate,GradePoints,
+Education,Diploma,Board,
+Education,Diploma,HallTicketNo,
+Education,Diploma,YearOfPass,
+Education,Diploma,Institute,
+Education,Diploma,MaxMarks,
+Education,Diploma,Obtained,
+Education,Diploma,GradeLetter,
+Education,Diploma,GradePoints,

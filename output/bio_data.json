@@ -1,0 +1,67 @@
+{
+    "BioData": {
+        "Branch": "CSE",
+        "Semester": "II/IV B.Tech I Semester",
+        "Gender": "Female",
+        "DOB": "16/10/2006",
+        "Nationality": "Indian",
+        "Religion": "Hindu",
+        "Entrance Type": "ECET",
+        "EAMCET/ECET Rank": "292",
+        "Seat Type": "Convener-Self",
+        "Category & Caste": "BC-D, BC-D",
+        "Last Studied": "Govt Polytecnic Hyderabad",
+        "Joining Date": "19/07/2025",
+        "Mobile.No": "9182863648",
+        "Aadhar.No": "856840733029",
+        "Scholarship": "No",
+        "Qualification\tBoard\tH.T.No\tYear\nOf\nPass\tInstitute\tMax.Marks\tObtained\nMarks\tGrade\nLetter\tGrade\nPoints\nS.S.C\tssc\t2205109675\t2022\tZ P Girls High School\t\t8.8\t\t8.80\nInter\t\t\t\t\t\t\t\t\nDiploma\tSBTET\t22001-CS-004\t2025\tGovt Polytechnic ,Hyderabad\t0\t9.4": "Board",
+        "H.T.No": "Institute",
+        "Qualification": "H.T.No",
+        "Year\nOf\nPass": "Max.Marks",
+        "S.S.C": "2205109675",
+        "Diploma": "22001-CS-004",
+        "2025": "0",
+        "Father Name": "Penta Chandramouli",
+        "Occupation": "Beedi Worker",
+        "Mother Name": "Penta Sunitha",
+        "Father Mobile.No": "9848632297",
+        "Mother Mobile.No": "9848631400",
+        "Annual Income": "0",
+        "Correspondence Address": "1-125/3/11 Armoor Railway station ARMOOR ARMOOR NIzamabad TELANGANA 503224",
+        "Permanent Address": "1-125/3/11 Armoor Railway station ARMOOR ARMOOR NIzamabad TELANGANA 503224",
+        "Type of place": "Rural"
+    },
+    "Education": {
+        "School (SSC)": {
+            "Board": "",
+            "HallTicketNo": "",
+            "YearOfPass": "",
+            "Institute": "",
+            "MaxMarks": "",
+            "Obtained": "",
+            "GradeLetter": "",
+            "GradePoints": ""
+        },
+        "Intermediate": {
+            "Board": "",
+            "HallTicketNo": "",
+            "YearOfPass": "",
+            "Institute": "",
+            "MaxMarks": "",
+            "Obtained": "",
+            "GradeLetter": "",
+            "GradePoints": ""
+        },
+        "Diploma": {
+            "Board": "",
+            "HallTicketNo": "",
+            "YearOfPass": "",
+            "Institute": "",
+            "MaxMarks": "",
+            "Obtained": "",
+            "GradeLetter": "",
+            "GradePoints": ""
+        }
+    }
+}

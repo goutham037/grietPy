@@ -1,0 +1,59 @@
+{
+    "BioData": {
+        "Branch": "CSE",
+        "Semester": "II/IV B.Tech I Semester",
+        "Gender": "Male",
+        "DOB": "03/11/2006",
+        "Nationality": "Indian",
+        "Religion": "Hindu",
+        "Entrance Type": "ECET",
+        "EAMCET/ECET Rank": "248",
+        "Seat Type": "Convener-Self",
+        "Category & Caste": "BC-B, BC-B",
+        "Last Studied": "Govt Polytechnic Nalgonda",
+        "Joining Date": "19/07/2025",
+        "Mobile.No": "7013123744",
+        "Aadhar.No": "232610997809",
+        "Scholarship": "No",
+        "Qualification\tBoard\tH.T.No\tYear\nOf\nPass\tInstitute\tMax.Marks\tObtained\nMarks\tGrade\nLetter\tGrade\nPoints\nS.S.C\tssc\t2231114411\t2022\tST.Theresa high school\t\t10\t\t10.00\nInter\t\t\t\t\t\t\t\t\nDiploma\tSBTET\t22027-CS-037\t2025\tGovt Polytechnic Nalgonda\t0\t9.48": "Board",
+        "H.T.No": "Institute",
+        "Qualification": "H.T.No",
+        "Year\nOf\nPass": "Max.Marks",
+        "S.S.C": "2231114411",
+        "Diploma": "22027-CS-037",
+        "2025": "0",
+        "Father Name": "Bathula Vijay",
+        "Mother Name": "Bathula Sridevi",
+        "Occupation": "Teacher",
+        "Mother Mobile.No": "9652211286",
+        "Annual Income": "0",
+        "Father mailid": "bathulasalomi@gmail.com",
+        "Correspondence Address": "20-11-DH0007 road no-18 KHAMAM KHAMAM KHAMAM TELANGANA 507003",
+        "Permanent Address": "20-11-DH0007 road no-18 KHAMAM KHAMAM KHAMAM TELANGANA 507003",
+        "Place of birth": "Khammam",
+        "Type of place": "Urban",
+        "Staying at": "Outside"
+    },
+    "Education": {
+        "S.S.C": {
+            "Board": "ssc",
+            "HallTicketNo": "2231114411",
+            "YearOfPass": "2022",
+            "Institute": "ST.Theresa high school",
+            "MaxMarks": "",
+            "Obtained": "10",
+            "GradeLetter": "",
+            "GradePoints": "10.00"
+        },
+        "Diploma": {
+            "Board": "SBTET",
+            "HallTicketNo": "22027-CS-037",
+            "YearOfPass": "2025",
+            "Institute": "Govt Polytechnic Nalgonda",
+            "MaxMarks": "0",
+            "Obtained": "9.48",
+            "GradeLetter": "",
+            "GradePoints": ""
+        }
+    }
+}

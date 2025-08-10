@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GRIET Student Portal</title>
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --card: #fff;
+      --primary: #007bff;
+      --text: #333;
+      --error: #d9534f;
+      --radius: 6px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    h1 { margin-bottom: 1rem; }
+    .buttons { margin-bottom: 1rem; }
+    .buttons button {
+      background: var(--card);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .buttons button.active {
+      background: var(--primary);
+      color: #fff;
+    }
+    .card {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .card input, .card button[type="submit"] {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: var(--radius);
+      font-size: 1rem;
+    }
+    .card button[type="submit"] {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .error {
+      color: var(--error);
+      margin-top: 0.5rem;
+    }
+    table {
+      width: 100%;
+      max-width: 600px;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      display: none;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    th {
+      background: var(--primary);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📘 GRIET Student Portal</h1>
+
+  <div class="buttons">
+    <button data-view="attendance" class="active">Attendance</button>
+    <button data-view="library">Library</button>
+    <button data-view="bio">Bio Data</button>
+  </div>
+
+  <div class="card">
+    <form id="form">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Fetch Data</button>
+    </form>
+    <div id="error" class="error"></div>
+  </div>
+
+  <!-- Attendance Table -->
+  <table id="attendanceTable">
+    <thead>
+      <tr>
+        <th>Sl. No.</th>
+        <th>Subject</th>
+        <th>Held</th>
+        <th>Attended</th>
+        <th>%</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Library Books Table -->
+  <table id="libraryTable">
+    <thead>
+      <tr>
+        <th>Sl. No.</th>
+        <th>Acc. No</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Issue Date</th>
+        <th>Due Date</th>
+        <th>Fine Days</th>
+        <th>Fine Amt</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Bio Data Table -->
+  <table id="bioTable">
+    <thead>
+      <tr><th>Field</th><th>Value</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const views = ['attendance','library','bio'];
+    let current = 'attendance';
+
+    // Fixed column orders:
+    const attendanceOrder = ["Sl.No.","Subject","Held","Attend","%"];
+    const libraryOrder    = ["Sl.No","Acc.No","Title","Author","Issue Date","Due Date","Fine Days","Fine Amount"];
+    const bioOrder        = [
+      "Admission.No","RollNo","Name","Course","Branch","Semester",
+      "Gender","DOB","Nationality","Religion",
+      "Entrance Type","EAMCET/ECET Rank","Seat Type","Category & Caste",
+      "Last Studied","Joining Date","Mobile.No","Email","Aadhar.No",
+      "Scholarship","Father Name","Mother Name","Occupation",
+      "Mother Mobile.No","Annual Income","Father mailid",
+      "Correspondence Address","Permanent Address","Place of birth",
+      "Type of place","Staying at","Height, Weight & BMI"
+    ];
+
+    // Switch view buttons
+    document.querySelectorAll('.buttons button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        current = btn.dataset.view;
+        document.querySelectorAll('.buttons button')
+          .forEach(b => b.classList.toggle('active', b === btn));
+        views.forEach(v => document.getElementById(v+'Table').style.display = 'none');
+        document.getElementById('error').textContent = '';
+      });
+    });
+
+    // Fetch and render
+    document.getElementById('form').addEventListener('submit', async e => {
+      e.preventDefault();
+      views.forEach(v => document.getElementById(v+'Table').style.display = 'none');
+      document.getElementById('error').textContent = '';
+
+      const user = e.target.username.value;
+      const pass = e.target.password.value;
+      const endpoint = {
+        attendance: '/get-attendance',
+        library:    '/get-library-books',
+        bio:        '/get-bio-data'
+      }[current];
+
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type':'application/json' },
+          body: JSON.stringify({ username: user, password: pass })
+        });
+        const { data, error } = await res.json();
+        if (!res.ok || error) throw new Error(error || 'Fetch failed');
+        if (!data || (Array.isArray(data) && !data.length)) {
+          document.getElementById('error').textContent = 'No data found.';
+          return;
+        }
+
+        // Prepare table & tbody
+        const table = document.getElementById(current+'Table');
+        const tbody = table.tBodies[0];
+        tbody.innerHTML = '';
+
+        if (current === 'attendance') {
+          // each row is an object
+          data.forEach(row => {
+            const cells = attendanceOrder.map(key => `<td>${row[key] || ''}</td>`).join('');
+            tbody.insertAdjacentHTML('beforeend', `<tr>${cells}</tr>`);
+          });
+
+        } else if (current === 'library') {
+          data.forEach(row => {
+            const cells = libraryOrder.map(key => `<td>${row[key] || ''}</td>`).join('');
+            tbody.insertAdjacentHTML('beforeend', `<tr>${cells}</tr>`);
+          });
+
+        } else {
+          // Bio data: use fixed order then leftovers
+          const leftover = { ...data };
+          bioOrder.forEach(key => {
+            if (key in leftover) {
+              tbody.insertAdjacentHTML(
+                'beforeend',
+                `<tr><td>${key}</td><td>${leftover[key]}</td></tr>`
+              );
+              delete leftover[key];
+            }
+          });
+          Object.entries(leftover).forEach(([k, v]) => {
+            tbody.insertAdjacentHTML(
+              'beforeend',
+              `<tr><td>${k}</td><td>${v}</td></tr>`
+            );
+          });
+        }
+
+        table.style.display = 'table';
+      } catch (err) {
+        document.getElementById('error').textContent = err.message;
+      }
+    });
+  </script>
+
+</body>
+</html>
