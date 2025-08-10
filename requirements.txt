@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+rq
+redis
+python-dotenv
+playwright
+pydantic
+python-multipart
+fastapi-limiter
+requests
+loguru
